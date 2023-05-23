@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+			crossorigin="anonymous"
+		/>
+		<title>Quản lí</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-sm" style="background-color: #e3f2fd">
+			<div class="container">
+				<a class="navbar-brand" href="#">Quản lí tài sản</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#">Tài sản</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Nhân viên</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="#">Thêm tài sản</a>
+						</li>
+					</ul>
+					<form class="d-flex" role="search">
+						<input
+							class="form-control me-2"
+							type="search"
+							placeholder="Search"
+							aria-label="Search"
+						/>
+						<button class="btn btn-outline-success" type="submit">
+							Search
+						</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<h3 class="mb-5 mt-5">Quản lí nhân viên</h3>
+
+			<div class="row">
+				<div class="col-6">
+					<form class="mb-4" action="/addnv" method="post">
+						<div class="mb-3">
+							<label for="nameNV" class="form-label fw-bold"
+								>Mã nhân viên</label
+							>
+							<input
+								placeholder="Mã nhân viên"
+								type="text"
+								class="form-control"
+								id="maNV"
+								min="1"
+								name="maNV"
+							/>
+							<div id="maNV_message" class="form-text text-danger d-none">
+								{message}
+							</div>
+						</div>
+
+						<div class="mb-3">
+							<label for="nameNV" class="form-label fw-bold"
+								>Tên nhân viên</label
+							>
+							<input
+								placeholder="Tên nhân viên"
+								type="text"
+								class="form-control"
+								id="nameNV"
+								min="1"
+								name="nameNV"
+							/>
+							<div id="nameNV_message" class="form-text text-danger d-none">
+								{message}
+							</div>
+						</div>
+
+						<div class="mb-3">
+							<label for="cmnd" class="form-label fw-bold">CMND</label>
+							<input
+								onkeydown="javascript: return event.keyCode == 69 ? false : true"
+								placeholder="Nhập chứng minh nhân dân"
+								type="text"
+								class="form-control"
+								id="cmnd"
+								name="cmnd"
+							/>
+							<div id="cmnd_message" class="form-text text-danger d-none">
+								{message}
+							</div>
+						</div>
+
+						<div class="mb-3">
+							<label for="email" class="form-label fw-bold">Email</label>
+							<input
+								placeholder="Nhập email"
+								type="email"
+								class="form-control"
+								id="email"
+								name="email"
+							/>
+							<div id="email_message" class="form-text text-danger d-none">
+								{message}
+							</div>
+						</div>
+
+						<div class="mb-3">
+							<label for="phone" class="form-label fw-bold"
+								>Số điện thoại</label
+							>
+							<input
+								onkeydown="javascript: return event.keyCode == 69 ? false : true"
+								placeholder="Nhập số điện thoại"
+								type="text"
+								class="form-control"
+								id="phone"
+								name="phone"
+							/>
+							<div id="phone_message" class="form-text text-danger d-none">
+								{message}
+							</div>
+						</div>
+
+						<button type="submit" class="btn btn-primary btn-gan">
+							Thêm nhân viên
+						</button>
+					</form>
+				</div>
+
+				<div class="col-6">
+					<table class="table">
+						<thead class="table-dark">
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">MaNV</th>
+								<th scope="col">HoTen</th>
+								<th scope="col">CMND</th>
+								<th scope="col">Email</th>
+								<th scope="col">SDT</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>NV01</td>
+								<td>Trần Minh Đức</td>
+								<td>123456789123</td>
+								<td>tranminhduc@gmail.com</td>
+								<td>0367218700</td>
+							</tr>
+
+							<tr>
+								<th scope="row">2</th>
+								<td>NV02</td>
+								<td>Trần Minh Đức</td>
+								<td>123456789123</td>
+								<td>tranminhduc@gmail.com</td>
+								<td>0367218700</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+			integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+			integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+			crossorigin="anonymous"
+		></script>
+
+		<script>
+			const maNVInput = document.querySelector("#maNV");
+			const cmndInput = document.querySelector("#cmnd");
+			const emailInput = document.querySelector("#email");
+			const phoneInput = document.querySelector("#phone");
+			const btnSubmit = document.querySelector(".btn-gan");
+			const mp = new Map();
+			mp.set("maNV", false);
+			mp.set("CMND", false);
+			mp.set("email", false);
+			mp.set("phone", false);
+
+			maNVInput.addEventListener("keyup", (e) => {
+				const regex = /^NV\d/;
+				const value = e.target.value;
+				const elemMessage = document.querySelector("#maNV_message");
+				if (value == "") {
+					setErr(elemMessage, "Không được để trống trường này", "maNV");
+				} else if (!testRegex(regex, value)) {
+					setErr(elemMessage, "Phải bắt đầu bằng NV + mã số", "maNV");
+				} else {
+					setSuccess(elemMessage, "maNV");
+				}
+			});
+
+			cmndInput.addEventListener("keyup", (e) => {
+				const value = e.target.value;
+				const elemMessage = document.querySelector("#cmnd_message");
+				const regexStr = /^\d+$/;
+				console.log(value, testRegex(regexStr, value));
+				if (value === "") {
+					setErr(elemMessage, "Không được để trống trường này", "CMND");
+				} else if (!testRegex(regexStr, value)) {
+					setErr(elemMessage, "CMND không hợp lệ", "CMND");
+				} else if (value.length > 12) {
+					setErr(elemMessage, "CMND phải nhỏ hơn 12 kí tự", "CMND");
+				} else {
+					setSuccess(elemMessage, "CMND");
+				}
+			});
+
+			emailInput.addEventListener("keyup", (e) => {
+				const value = e.target.value;
+				const elemMessage = document.querySelector("#email_message");
+				const regexStr =
+					/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+				if (value === "") {
+					setErr(elemMessage, "Không được để trống trường này", "email");
+				} else if (!testRegex(regexStr, value)) {
+					setErr(elemMessage, "email không hợp lệ", "email");
+				} else {
+					setSuccess(elemMessage, "email");
+				}
+			});
+
+			phoneInput.addEventListener("keyup", (e) => {
+				const value = e.target.value;
+				const elemMessage = document.querySelector("#phone_message");
+				const regexStr = /^\d+$/;
+				console.log(value, testRegex(regexStr, value));
+				if (value === "") {
+					setErr(elemMessage, "Không được để trống trường này", "phone");
+				} else if (!testRegex(regexStr, value)) {
+					setErr(elemMessage, "Số điện thoại không hợp lệ", "phone");
+				} else {
+					setSuccess(elemMessage, "phone");
+				}
+			});
+
+			function setErr(elem, message, key) {
+				elem.classList.remove("d-none");
+				elem.innerHTML = message;
+				mp.set(key, false);
+			}
+
+			function setSuccess(elem, key) {
+				elem.classList.add("d-none");
+				elem.innerHTML = "";
+				mp.set(key, true);
+			}
+
+			function testRegex(regexString, str) {
+				return regexString.test(str);
+			}
+
+			btnSubmit.addEventListener("click", (event) => {
+				mp.forEach((e, index) => {
+					console.log(e);
+					if (e == false) {
+						event.preventDefault();
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

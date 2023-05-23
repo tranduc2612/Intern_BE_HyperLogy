@@ -1,0 +1,7 @@
+B1 = A1 - B1*Q
+Q lấy A2 chia nguyên cho B2 (phần nguyên)
+A1 A2 bê nguyên từ trên xuống
+B2 là A2 chia dư cho B2(ở trên)
+
+làm đến khi nào B2 = 1 lấy kết quả là B1 để kết luận
+nếu B2 = 0 thì kết luận ko có nghịch đảo

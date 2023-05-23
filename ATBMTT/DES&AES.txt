@@ -1,0 +1,159 @@
+DES 
+
+Câu 1:
+Ri-1 = F0AAF0AA
+
+Chuyển Ri-1 về dạng nhị phân ta được
+
+E = {
+011110
+100001
+010101
+010101
+011110
+100001
+010101
+010101
+}
+
+chuyển E về dạng hex
+
+Câu 2:
+K = 000110 110000 001011 101111 111111 000111 000001 110010
+
+K = đổi về nhị phân
+E = đổi về nhị phân
+
+K + E 
+
+Câu 3: thế Sbox DES
+sau khi xo thì chúng ta lại nhặt 6 bit 1 vào 1 cặp
+K+E = 011000 010001 011110 111010 100001 100110 010100 100111
+	S1	S2    S3     S4     S5     S6      S7     S8
+
+011000 = 0 1100 0
+S-box bảng 1
+=> 00 = row
+=> 1100 = col
+=> tra bảng được 5 => nhị phân là 1010
+=> ra đc SB = 1010 ...
+=> S1 = SB
+
+=> tương tự tính: S2 , S3, S4, ...
+
+gộp vào được B = .....
+
+AES
+
+M = B104AADD3AC293DF787EFD2CF8065925
+K = C2 81 B1 76 3B 14 0E F7 AB 12 EB 27 45 F1 F5 9F
+
+Sinh khóa
+
+w0 w1 w2 w3
+c2 3B AB 45
+81 14 12 F1
+B1 0E EB F5
+76 F7 27 9F
+
+w3 sẽ được đưa vào hàm G
+(
+*dịch trái 1 byte
+w3 = 45 F1 F5 9F
+=> F1 F5 9F 45
+
+*So bảng S-box của AES
+
+hàng F cột 1 => A1
+hàng F cột 5 => E6
+hàng 9 cột F => DB
+hàng 4 cột 5 => 6E
+
+=> S-box = A1E6DB6E
+
+*Xo với Rcon
+
+A1E6DB6E + 01000000
+
+A1 đổi về bin = 1010 0001
+01 đổi về bin = 0000 0001
+=> Xo được 1010 0000 => A0
+=>giá trị trả về hàm g là xrc = A0E6DB6E
+)
+W4 = xrc xor w0
+W5 = w4 xor w1
+W6 = w5 xor w2
+W7 = w6 xor w3 
+
+=> K = W4W5W6W7
+
+Mã hóa
+
+M = 4AEB5D62EC3B55DBF5D5A87708E2FF1E
+
+
+* bắt đầu vòng lặp
+
+=> sau khi addRoundKey với khóa tương ứng bên kia
+
+M = 2D EF 9F 6C E4 50 6A 88 8F 30 DA 68 40 8F 3A 47
+
+dạng ma trận
+
+2D E4 8F 40
+EF 50 30 8F
+9F 6A DA 3A
+6C 88 68 47
+
+1. SubByte - Sbox của AES
+
+vd: 2D => hàng 2 cột D => 2D = D8
+    EF => hàng E cột F => EF = DF
+    ...
+
+Ta được:
+state = SubByte(state) =
+D8 69 73 09
+DF 53 04 73
+DB 02 57 80
+50 C4 45 A0
+
+2. ShiftRows(state)
+dòng 1 giữ nguyên
+dòng 2 dịch trái 1
+dòng 3 dịch trái 2
+dòng 4 dịch trái 3
+
+=>
+state = ShiftRow(state) =
+
+D8 69 73 09
+53 04 73 DF
+57 80 DB 02
+A0 50 C4 45
+
+3. Mix columns
+
+state = MixColumn(state) = 
+
+02 03 01 01   D8 69 73 09   S0 S4 S8  S12
+01 02 03 01   53 04 73 DF   S1 S5 S9  S13
+01 01 02 03 X 57 80 DB 02 = S2 S6 S10 S14
+03 01 01 02   A0 50 C4 45   S3 S7 S11 S15
+
+* nhân 2 ma trận ví dụ tìm tại vị trí số S0
+thì ta lấy HÀNG nhân CỘT
+
+(02*D8) xor (03*53) xor (01*57) xor (01*A0) = AB xor F5 xor 57 xor A0 = A9
+
+* bấm máy tính 02 * D8 nếu tràn ta phải xor nó với 11B
+* nếu là 03 * 53 => (53*02)*53 nếu trần thì lại xor nó với 11B
+
+* nếu cứ tính thế đến hết S15 t được ma trận
+
+A9 0E 6C 2F
+27 B1 27 EF
+DE 9D FA 1D
+2C 9F AE 4C
+
+4. Adround Key lần nữa và ra kết quả (Không thi)
