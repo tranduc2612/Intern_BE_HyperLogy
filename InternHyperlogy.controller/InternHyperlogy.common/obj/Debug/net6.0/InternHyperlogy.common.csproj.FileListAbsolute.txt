@@ -1,0 +1,17 @@
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\bin\Debug\net6.0\InternHyperlogy.common.deps.json
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\bin\Debug\net6.0\InternHyperlogy.common.runtimeconfig.json
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\bin\Debug\net6.0\InternHyperlogy.common.dll
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\bin\Debug\net6.0\InternHyperlogy.common.pdb
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\bin\Debug\net6.0\InternHyperlogy.model.dll
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\bin\Debug\net6.0\InternHyperlogy.model.pdb
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\obj\Debug\net6.0\InternHyperlogy.common.csproj.AssemblyReference.cache
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\obj\Debug\net6.0\InternHyperlogy.common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\obj\Debug\net6.0\InternHyperlogy.common.AssemblyInfoInputs.cache
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\obj\Debug\net6.0\InternHyperlogy.common.AssemblyInfo.cs
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\obj\Debug\net6.0\InternHyperlogy.common.csproj.CoreCompileInputs.cache
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\obj\Debug\net6.0\InternHyperlogy.common.csproj.CopyComplete
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\obj\Debug\net6.0\InternHyperlogy.common.dll
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\obj\Debug\net6.0\refint\InternHyperlogy.common.dll
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\obj\Debug\net6.0\InternHyperlogy.common.pdb
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\obj\Debug\net6.0\InternHyperlogy.common.genruntimeconfig.cache
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.common\obj\Debug\net6.0\ref\InternHyperlogy.common.dll

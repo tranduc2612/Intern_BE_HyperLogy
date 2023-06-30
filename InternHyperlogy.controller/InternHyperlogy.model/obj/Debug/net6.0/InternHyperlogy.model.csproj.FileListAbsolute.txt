@@ -1,0 +1,14 @@
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.model\bin\Debug\net6.0\InternHyperlogy.model.deps.json
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.model\bin\Debug\net6.0\InternHyperlogy.model.runtimeconfig.json
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.model\bin\Debug\net6.0\InternHyperlogy.model.dll
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.model\bin\Debug\net6.0\InternHyperlogy.model.pdb
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.model\obj\Debug\net6.0\InternHyperlogy.model.csproj.AssemblyReference.cache
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.model\obj\Debug\net6.0\InternHyperlogy.model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.model\obj\Debug\net6.0\InternHyperlogy.model.AssemblyInfoInputs.cache
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.model\obj\Debug\net6.0\InternHyperlogy.model.AssemblyInfo.cs
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.model\obj\Debug\net6.0\InternHyperlogy.model.csproj.CoreCompileInputs.cache
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.model\obj\Debug\net6.0\InternHyperlogy.model.dll
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.model\obj\Debug\net6.0\refint\InternHyperlogy.model.dll
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.model\obj\Debug\net6.0\InternHyperlogy.model.pdb
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.model\obj\Debug\net6.0\InternHyperlogy.model.genruntimeconfig.cache
+C:\Users\OSC\Desktop\InternHyperlogy.controller\InternHyperlogy.model\obj\Debug\net6.0\ref\InternHyperlogy.model.dll
